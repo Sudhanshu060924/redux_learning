@@ -1,11 +1,34 @@
-import React from 'react'
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "./redux/features/counterSlice";
 
 const App = () => {
-  return (
-    <div>
-      App
-    </div>
-  )
-}
+  const dispatch = useDispatch();
 
-export default App
+  const count = useSelector((state) => state.counter.value);
+
+  return (
+    <div className="text-center mt-[20%]">
+      <h1 className="text-6xl">{count}</h1>
+
+      <button
+        onClick={() => {
+          dispatch(increment());
+        }}
+        className=" mr-10 border-2 border-amber-200 p-2"
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          dispatch(decrement());
+        }}
+        className=" border-2 border-amber-200 p-2"
+      >
+        Decerement
+      </button>
+    </div>
+  );
+};
+
+export default App;
