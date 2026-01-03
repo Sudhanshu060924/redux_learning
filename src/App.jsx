@@ -23,7 +23,7 @@ const App = () => {
         onClick={() => {
           dispatch(decrement());
         }}
-        className=" border-7
+        className=" border-5
          border-amber-200 p-2"
       >
         Decerement
