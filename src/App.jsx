@@ -15,7 +15,7 @@ const App = () => {
         onClick={() => {
           dispatch(increment());
         }}
-        className=" mr-10 border-2 border-amber-200 p-2"
+        className=" mr-15 border-2 border-amber-200 p-2"
       >
         Increment
       </button>
